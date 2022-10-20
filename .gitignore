@@ -1,3 +1,14 @@
+# Data files
+data/
+results_stan/
+results/
+
+# Figures
+figures/
+
+# Trash
+trash/
+
 # History files
 .Rhistory
 .Rapp.history
@@ -19,6 +30,7 @@
 
 # RStudio files
 .Rproj.user/
+cdi-semantic-context-child_adult.Rproj
 
 # produced vignettes
 vignettes/*.html
