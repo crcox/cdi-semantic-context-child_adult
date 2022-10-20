@@ -72,12 +72,12 @@ h <- function(associations) {
         group_by(CUE, COND) %>% # nolint
         mutate(gmixed = sample(gl(2, ceiling(n() / 2)))[seq_len(n())]) %>%
         ungroup() %>%
-        pivot_responses_long() %>%
+        pivot_responses_long() %>% # nolint
         group_by(gmixed) %>% # nolint
         group_split() %>%
         map(function(d) {
-            correlate_response_profiles(
-                generate_response_profiles(d)
+            correlate_response_profiles( # nolint
+                generate_response_profiles(d) # nolint
             )
         })
 }
